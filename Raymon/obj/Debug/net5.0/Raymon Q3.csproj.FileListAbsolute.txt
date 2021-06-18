@@ -1,0 +1,16 @@
+C:\Users\Pedram\source\repos\Raymon\Raymon\bin\Debug\net5.0\Raymon Q3.exe
+C:\Users\Pedram\source\repos\Raymon\Raymon\bin\Debug\net5.0\Raymon Q3.deps.json
+C:\Users\Pedram\source\repos\Raymon\Raymon\bin\Debug\net5.0\Raymon Q3.runtimeconfig.json
+C:\Users\Pedram\source\repos\Raymon\Raymon\bin\Debug\net5.0\Raymon Q3.runtimeconfig.dev.json
+C:\Users\Pedram\source\repos\Raymon\Raymon\bin\Debug\net5.0\Raymon Q3.dll
+C:\Users\Pedram\source\repos\Raymon\Raymon\bin\Debug\net5.0\ref\Raymon Q3.dll
+C:\Users\Pedram\source\repos\Raymon\Raymon\bin\Debug\net5.0\Raymon Q3.pdb
+C:\Users\Pedram\source\repos\Raymon\Raymon\obj\Debug\net5.0\Raymon Q3.csprojAssemblyReference.cache
+C:\Users\Pedram\source\repos\Raymon\Raymon\obj\Debug\net5.0\Raymon Q3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pedram\source\repos\Raymon\Raymon\obj\Debug\net5.0\Raymon Q3.AssemblyInfoInputs.cache
+C:\Users\Pedram\source\repos\Raymon\Raymon\obj\Debug\net5.0\Raymon Q3.AssemblyInfo.cs
+C:\Users\Pedram\source\repos\Raymon\Raymon\obj\Debug\net5.0\Raymon Q3.csproj.CoreCompileInputs.cache
+C:\Users\Pedram\source\repos\Raymon\Raymon\obj\Debug\net5.0\Raymon Q3.dll
+C:\Users\Pedram\source\repos\Raymon\Raymon\obj\Debug\net5.0\ref\Raymon Q3.dll
+C:\Users\Pedram\source\repos\Raymon\Raymon\obj\Debug\net5.0\Raymon Q3.pdb
+C:\Users\Pedram\source\repos\Raymon\Raymon\obj\Debug\net5.0\Raymon Q3.genruntimeconfig.cache

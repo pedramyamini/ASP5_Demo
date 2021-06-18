@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body dir="rtl" class="bg-light">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">دانشگاه</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">صفحه اصلی</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Course" asp-action="Index">دوره‌ها</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Student" asp-action="Index">دانشجویان</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container text-right">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; مثال دانشگاه - پدرام یمینی
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="form-modal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="form-modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="form-modalLabel">
+                    </h5>
+                    <button type="button" class="close" style="margin-left: 0;" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="form-modalBody" class="modal-body">
+
+                </div>
+                <div class="modal-footer" style="direction: ltr;">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">لغو</button>
+                    <button type="button" onclick="submitForm();" class="btn btn-primary">تایید</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        function showModal(getUrl, postUrl = '', data = {}, refreshGridUrl = '', modalTitle = 'افزودن دانشجو') {
+            if (postUrl == '')
+                postUrl = getUrl;
+
+            $.get(
+                getUrl,
+                data,
+                function (result, status) {
+                    $('#form-modalLabel').html(modalTitle);
+                    $('#form-modalBody').html(result);
+                    $('#form-modal').modal('show');
+                })
+                .fail(function () {
+                    alert("error");
+                })
+                .always(function () {
+                    console.log("finished");
+                });
+        }
+
+        function submitForm() {
+            $.validator.unobtrusive.parse("#form-modalBody form");
+            if ($('#form-modalBody form').valid()) {
+                var action = document.forms[0].action;
+                if (action.includes('Upsert')) {
+                    action = '@Url.Action("Upsert")';
+                }
+                else if(action.includes('Delete')) {
+                    action = '@Url.Action("Delete")';
+                }
+
+                $.post(action,
+                    $('#form-modalBody form').serialize(),
+                    function (result, status) {
+                    Swal.fire(
+                        {
+                            icon: 'success',
+                            text: 'عملیات با موفقیت انجام شد',
+                            confirmButtonText: 'متوجه شدم'
+                        }
+                    ).then(function () {
+                        $.get('@Url.Action("FillGrid")', {}, function (res, status) {
+                            $('#' + action.split('/')[1].toLowerCase() + '-grid').html(res);
+                            $('#form-modal').modal('hide');
+                        });
+                    });
+                }
+            ).fail(function () {
+                Swal.fire({
+                    icon: 'error',
+                    text: 'عملیات ذخیره‌سازی با خطا روبرو شد.',
+                    confirmButtonText: 'متوجه شدم'
+                })
+            });
+            }
+
+        }
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

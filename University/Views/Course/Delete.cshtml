@@ -1,0 +1,16 @@
+﻿@model Course
+
+@{
+    Layout = null;
+}
+
+<form id="deleteForm" action="@Url.Action("Delete")" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="@Model.Id" id="txtId" name="Id" />
+
+    <div class="form-group">
+        <div class="col-md-12 text-right">
+            <input asp-for="@Model.Title" id="txtTitle" name="Title" type="text" placeholder="عنوان دوره" class="form-control d-inline" readonly />
+        </div>
+    </div>
+</form>

@@ -1,0 +1,22 @@
+﻿@model Course
+@{
+    ViewData["Title"] = "دوره";
+    Layout = null;
+}
+
+<form id="upsertForm" action="@Url.Action("Upsert")" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="@Model.Id" id="txtId" name="Id" />
+
+    <div class="form-group">
+        <div class="col-md-12 text-right">
+            <input asp-for="@Model.Title" id="txtTitle" name="Title" type="text" placeholder="عنوان دوره" class="form-control d-inline" />
+            <span class="text-danger" asp-validation-for="@Model.Title"></span>
+        </div>
+    </div>
+</form>
+
+@section Scripts
+{
+
+}

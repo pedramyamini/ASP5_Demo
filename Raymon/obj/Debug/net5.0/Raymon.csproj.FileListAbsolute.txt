@@ -1,0 +1,16 @@
+C:\Users\Pedram\source\repos\Raymon\Raymon\bin\Debug\net5.0\Raymon.exe
+C:\Users\Pedram\source\repos\Raymon\Raymon\bin\Debug\net5.0\Raymon.deps.json
+C:\Users\Pedram\source\repos\Raymon\Raymon\bin\Debug\net5.0\Raymon.runtimeconfig.json
+C:\Users\Pedram\source\repos\Raymon\Raymon\bin\Debug\net5.0\Raymon.runtimeconfig.dev.json
+C:\Users\Pedram\source\repos\Raymon\Raymon\bin\Debug\net5.0\Raymon.dll
+C:\Users\Pedram\source\repos\Raymon\Raymon\bin\Debug\net5.0\ref\Raymon.dll
+C:\Users\Pedram\source\repos\Raymon\Raymon\bin\Debug\net5.0\Raymon.pdb
+C:\Users\Pedram\source\repos\Raymon\Raymon\obj\Debug\net5.0\Raymon.csprojAssemblyReference.cache
+C:\Users\Pedram\source\repos\Raymon\Raymon\obj\Debug\net5.0\Raymon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pedram\source\repos\Raymon\Raymon\obj\Debug\net5.0\Raymon.AssemblyInfoInputs.cache
+C:\Users\Pedram\source\repos\Raymon\Raymon\obj\Debug\net5.0\Raymon.AssemblyInfo.cs
+C:\Users\Pedram\source\repos\Raymon\Raymon\obj\Debug\net5.0\Raymon.csproj.CoreCompileInputs.cache
+C:\Users\Pedram\source\repos\Raymon\Raymon\obj\Debug\net5.0\Raymon.dll
+C:\Users\Pedram\source\repos\Raymon\Raymon\obj\Debug\net5.0\ref\Raymon.dll
+C:\Users\Pedram\source\repos\Raymon\Raymon\obj\Debug\net5.0\Raymon.pdb
+C:\Users\Pedram\source\repos\Raymon\Raymon\obj\Debug\net5.0\Raymon.genruntimeconfig.cache

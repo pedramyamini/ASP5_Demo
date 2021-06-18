@@ -1,0 +1,28 @@
+﻿@model List<Student>
+@{ 
+    Layout = null;
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th class="w-25">نام</th>
+            <th class="w-25">نام خانوادگی</th>
+            <th class="w-25">ویرایش</th>
+            <th class="w-25">حذف</th>
+        </tr>
+    </thead>
+    @foreach (var student in Model)
+    {
+        <tr>
+            <td>@student.FirstName</td>
+            <td>@student.LastName</td>
+            <td>
+                <button onclick="showModal('@Url.Action("Upsert")/@student.Id', '', {},'', 'ویرایش دانشجو');" class="btn btn-primary">ویرایش</button>
+            </td>
+            <td>
+                <button onclick="showModal('@Url.Action("Delete")/@student.Id', '', {}, '', 'حذف دانشجو');" class="btn btn-danger">حذف</button>
+            </td>
+        </tr>
+    }
+</table>

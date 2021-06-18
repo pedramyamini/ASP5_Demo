@@ -1,0 +1,26 @@
+﻿@model List<Course>
+@{ 
+    Layout = null;
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th class="w-25">عنوان دوره</th>
+            <th class="w-25">ویرایش</th>
+            <th class="w-25">حذف</th>
+        </tr>
+    </thead>
+    @foreach (var course in Model)
+    {
+        <tr>
+            <td>@course.Title</td>
+            <td>
+                <button onclick="showModal('@Url.Action("Upsert")/@course.Id', '', {},'', 'ویرایش دوره');" class="btn btn-primary">ویرایش</button>
+            </td>
+            <td>
+                <button onclick="showModal('@Url.Action("Delete")/@course.Id', '', {}, '', 'حذف دوره');" class="btn btn-danger">حذف</button>
+            </td>
+        </tr>
+    }
+</table>

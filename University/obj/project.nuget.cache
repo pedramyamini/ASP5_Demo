@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "snsyyAHrYehEhIdcEqDPPf71E+KPIWv4w9Nr4tKRpKntpnP3Lg5Enh8Fvo5RytksAvnueNauc8Ok33XlVz7XDw==",
+  "dgSpecHash": "OrbNHEcdIsE4dB0hi2DcZyUeC4wl1+g3SJDyIoyNPl0pFyV0+Vg6DvQkHpgwnwU/ZVuAZOsB1Gb4znM38Xrd2g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Pedram\\source\\repos\\Raymon\\University\\University.csproj",
   "expectedPackageFiles": [
@@ -109,6 +109,8 @@
     "C:\\Users\\Pedram\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\Pedram\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
+    "C:\\Users\\Pedram\\.nuget\\packages\\pagedlist.core\\1.17.4\\pagedlist.core.1.17.4.nupkg.sha512",
+    "C:\\Users\\Pedram\\.nuget\\packages\\pagedlist.core.mvc\\3.0.0\\pagedlist.core.mvc.3.0.0.nupkg.sha512",
     "C:\\Users\\Pedram\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Pedram\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Pedram\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

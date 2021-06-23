@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using PagedList.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,9 +20,9 @@ namespace University.Controllers
             _db = db;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int? page)
         {
-            var Courses = _db.Courses.OrderByDescending(s => s.Id).ToList();
+            var Courses = _db.Courses.OrderByDescending(s => s.Id).AsEnumerable().ToPagedList(page ?? 1,10);
             return View(Courses);
         }
 
@@ -48,17 +50,15 @@ namespace University.Controllers
         }
 
         [HttpPost]
-        public IActionResult Upsert(Course Course)
+        public IActionResult Upsert(Course course)
         {
             //Update
-            if (Course.Id > 0)
+            if (course.Id > 0)
             {
-                var ExistingCourse = _db.Courses.Find(Course.Id);
+                var ExistingCourse = _db.Courses.AsNoTracking().SingleOrDefault(c=>c.Id == course.Id);
                 if (ExistingCourse != null)
                 {
-                    var config = new MapperConfiguration(c => c.CreateMap<Course, Course>());
-                    var mapper = config.CreateMapper();
-                    mapper.Map<Course, Course>(Course, ExistingCourse);
+                    _db.Entry(course).State = EntityState.Modified;
 
                     _db.SaveChanges();
                     return Ok();
@@ -72,7 +72,7 @@ namespace University.Controllers
             {
                 try
                 {
-                    _db.Courses.Add(Course);
+                    _db.Courses.Add(course);
                     _db.SaveChanges();
                     return Ok();
                 }

@@ -438,3 +438,8 @@ C:\Users\Pedram\source\repos\Raymon\University\obj\Debug\net5.0\Razor\Views\Cour
 C:\Users\Pedram\source\repos\Raymon\University\obj\Debug\net5.0\Razor\Views\Shared\_CourseGrid.cshtml.g.cs
 C:\Users\Pedram\source\repos\Raymon\University\obj\Debug\net5.0\Razor\Views\Course\Delete.cshtml.g.cs
 C:\Users\Pedram\source\repos\Raymon\University\obj\Debug\net5.0\Razor\Views\Course\Upsert.cshtml.g.cs
+C:\Users\Pedram\source\repos\Raymon\University\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Pedram\source\repos\Raymon\University\bin\Debug\net5.0\MvcPagedList.Core.dll
+C:\Users\Pedram\source\repos\Raymon\University\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\Pedram\source\repos\Raymon\University\bin\Debug\net5.0\PagedList.Core.dll
+C:\Users\Pedram\source\repos\Raymon\University\bin\Debug\net5.0\PagedList.Core.Mvc.dll

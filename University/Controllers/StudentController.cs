@@ -7,6 +7,7 @@ using University.Data;
 using University.Models;
 using System.Text.Json;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 
 namespace University.Controllers
 {
@@ -55,12 +56,10 @@ namespace University.Controllers
             //Update
             if (student.Id > 0)
             {
-                var ExistingStudent = _db.Students.Find(student.Id);
+                var ExistingStudent = _db.Students.AsNoTracking().SingleOrDefault(s=>s.Id==student.Id);
                 if (ExistingStudent != null)
                 {
-                    var config = new MapperConfiguration(c => c.CreateMap<Student, Student>());
-                    var mapper = config.CreateMapper();
-                    mapper.Map<Student, Student>(student, ExistingStudent);
+                    _db.Entry(student).State = EntityState.Modified;
 
                     _db.SaveChanges();
                     return Ok();

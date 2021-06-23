@@ -27,7 +27,7 @@ using University.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2c90e6e65f34541d4c718092dba0063f362f16a6", @"/Views/Shared/_StudentGrid.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e04dcc244e1469154104359d31508023c653ccb7", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6be6e1d28ebfea77e0e20e91cb5493838aa64980", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__StudentGrid : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Student>>
     {
         #pragma warning disable 1998
